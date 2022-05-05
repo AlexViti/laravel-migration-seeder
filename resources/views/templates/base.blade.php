@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-
+  <h1>@yield('name')</h1>
+  @yield('content')
 </body>
 </html>
