@@ -15,9 +15,8 @@ class TrainController extends Controller
     public function index()
     {
         $trains = Train::where('departure_time', '>=', today())
-            ->where('departure_time', '<', tomorrow())
             ->orderBy('departure_time', 'asc')
-            ->get()->paginate(50);
+            ->paginate(20);
         return view('home', compact('trains'));
     }
 
@@ -50,7 +49,7 @@ class TrainController extends Controller
      */
     public function show(Train $train)
     {
-        //
+        return view('show', compact('train'));
     }
 
     /**
