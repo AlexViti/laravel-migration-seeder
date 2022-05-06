@@ -14,7 +14,7 @@ class TrainController extends Controller
      */
     public function index()
     {
-        $trains = Train::where('departure_time', '>=', today())
+        $trains = Train::whereDate('departure_time', '=', today())
             ->orderBy('departure_time', 'asc')
             ->paginate(15);
         return view('home', compact('trains'));

@@ -34,17 +34,25 @@ body {
                     margin-top: 1rem;
                 }
                 a {
-                    display: block;
-                    padding: 1rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
                     border: 1px solid #ccc;
                     border-radius: 5px;
+
+                    div {
+                        padding: 1rem;
+                        height: 100%;
+                        border: 1px solid #ccc;
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
             }
         }
 
         .pages {
             ul {
-                margin: 0 auto;
+                justify-content: center;
                 display: flex;
                 gap: 2rem;
             }
