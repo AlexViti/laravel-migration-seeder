@@ -1,15 +1,13 @@
-@extends('\templates\base')
+@extends('templates.base')
 
 @section('title', 'Trains')
 
-@section('name', 'Trains')
-
 @section('content')
-<main>
-  <ul>
-    @foreach ($trains as $train)
-      <li> {{ $train->company }}||{{ $train->code }}||{{ $train->departure_station }}: {{ $train->departure_time }}||{{ $train->arrival_station }}: {{ $train->arrival_time }}</li>
-    @endforeach
-  </ul>
-</main>
+    <h1>Trains</h1>
+    <ul>
+        @foreach ($trains as $train)
+            <li>
+            </li>
+        @endforeach
+    </ul>
 @endsection
