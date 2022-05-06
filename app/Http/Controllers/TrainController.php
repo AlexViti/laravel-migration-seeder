@@ -16,7 +16,7 @@ class TrainController extends Controller
     {
         $trains = Train::where('departure_time', '>=', today())
             ->orderBy('departure_time', 'asc')
-            ->paginate(20);
+            ->paginate(15);
         return view('home', compact('trains'));
     }
 
